@@ -148,8 +148,7 @@ if ($type =~ "volt") {
     $title = "Temperature";
     $vlabel = "Celsius";
     $info = "actual value of Temperature monitors.";
-    $oid = "1.3.6.1.4.1.2925.4.5.9.1.5.";
-    $format = "%.1f";
+    $format = "%.2f";
 } else {
     print "Couldn't get type from $tail\n";
     exit 1;
