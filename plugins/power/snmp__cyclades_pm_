@@ -179,7 +179,7 @@ if ($type =~ "temp") {
     my %hash = find_temp_sensor();
     foreach my $id (sort(keys(%hash))) {
         my $val = $session->get_single($hash{$id}) || "U";
-        printf ("%s.value $format\n", lc($id), ($val / 10));
+        printf ("%s.value $format\n", lc(get_pdu_id($id)), ($val / 10));
     }
 } else {
     foreach my $port (get_pdu_ports()) {
